@@ -1,48 +1,40 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "./Button";
 
 const Header = () => {
   return (
-    <header className="w-full bg-pink-200 px-4 py-2">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="flex items-center gap-2">
+    <header className="w-full bg-gradient-to-r from-[#F9D5EB] to-[#E69AFD] px-6 py-2">
+      <div className="flex justify-between items-center">
+        <div className="flex items-center gap-4">
           <div className="w-12 h-12 relative">
             <Image
-              src="/prism-logo.svg" // You'll need to add your logo to public folder
+              src="/prism-logo.png" // You'll need to add your logo to public folder
               alt="Prism Collective Logo"
               fill
               className="object-contain"
             />
           </div>
-          <div>
-            <h1 className="text-xl font-medium">PRISM</h1>
-            <p className="text-sm">COLLECTIVE</p>
+          <div className="text-black">
+            <h1 className="text-2xl font-metro">PRISM</h1>
+            <p className="text-sm font-metro">COLLECTIVE</p>
           </div>
         </div>
 
         <nav className="flex gap-4">
-          <Link 
-            href="/projects" 
-            className="px-6 py-2 bg-white rounded-full hover:bg-gray-50 transition-colors"
-          >
-            PROJECTS
-          </Link>
-          <Link 
-            href="/contact" 
-            className="px-6 py-2 bg-white rounded-full hover:bg-gray-50 transition-colors"
-          >
-            CONTACT
-          </Link>
-          <Link 
-            href="/join" 
-            className="px-6 py-2 bg-blue-200 rounded-full hover:bg-blue-300 transition-colors"
-          >
-            JOIN US
-          </Link>
+          <Button>
+            <Link href="/projects">PROJECTS</Link>
+          </Button>
+          <Button>
+            <Link href="/contact">CONTACT</Link>
+          </Button>
+          <Button variant="blue">
+            <Link href="/join">JOIN US</Link>
+          </Button>
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

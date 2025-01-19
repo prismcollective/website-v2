@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        metro: ["var(--font-metro)", "sans-serif"],
+        sans: ["Azeret Mono", "monospace"],
+      },
     },
   },
   plugins: [],
