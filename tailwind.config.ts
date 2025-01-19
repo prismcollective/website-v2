@@ -16,6 +16,15 @@ export default {
         metro: ["var(--font-metro)", "sans-serif"],
         sans: ["Azeret Mono", "monospace"],
       },
+      keyframes: {
+        "scroll-left": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "scroll-left": "scroll-left 28s linear infinite",
+      },
     },
   },
   plugins: [],
