@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "default" | "blue";
+  variant?: "default" | "blue" | "purple";
 }
 
 export default function Button({
@@ -12,12 +12,14 @@ export default function Button({
   const variants = {
     default: "bg-[#FFF6ED] hover:bg-[#ffe3ce]",
     blue: "bg-blue-200 hover:bg-blue-300",
+    purple:
+      "rounded-md flex items-center h-7 bg-[#F1C5FE] hover:bg-[#E9A8FD] text-xs",
   };
 
   return (
     <button
       className={
-        "text-black border border-black shadow-[2px_2px_0px_0px_#000] rounded-full px-6 py-2  transition-colors " +
+        "text-black border border-black shadow-[2px_2px_0px_0px_#000] rounded-full px-6 py-2 transition-colors " +
         variants[variant]
       }
       {...props}
