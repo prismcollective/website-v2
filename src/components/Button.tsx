@@ -4,11 +4,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "default" | "blue";
 }
 
-export const Button = ({
+export default function Button({
   children,
   variant = "default",
   ...props
-}: ButtonProps) => {
+}: ButtonProps) {
   const variants = {
     default: "bg-[#FFF6ED] hover:bg-[#ffe3ce]",
     blue: "bg-blue-200 hover:bg-blue-300",
@@ -25,4 +25,4 @@ export const Button = ({
       {children}
     </button>
   );
-};
+}

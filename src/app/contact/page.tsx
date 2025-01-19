@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Page() {
   return (
     <div>
       <h1 className="text-4xl font-metro">Hello, world!</h1>

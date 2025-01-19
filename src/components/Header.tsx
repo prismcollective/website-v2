@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "./Button";
+import Button from "./Button";
 
 const Header = () => {
   return (
@@ -8,12 +8,14 @@ const Header = () => {
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 relative">
-            <Image
-              src="/prism-logo.png" // You'll need to add your logo to public folder
-              alt="Prism Collective Logo"
-              fill
-              className="object-contain"
-            />
+            <Link href="/">
+              <Image
+                src="/prism-logo.png" // You'll need to add your logo to public folder
+                alt="Prism Collective Logo"
+                fill
+                className="object-contain"
+              />
+            </Link>
           </div>
           <div className="text-black">
             <h1 className="text-2xl font-metro">PRISM</h1>
@@ -29,7 +31,9 @@ const Header = () => {
             <Link href="/contact">CONTACT</Link>
           </Button>
           <Button variant="blue">
-            <Link href="/join">JOIN US</Link>
+            <Link href="https://discord.gg/EQW8Qu7jA9" target="_blank">
+              JOIN US
+            </Link>
           </Button>
         </nav>
       </div>
