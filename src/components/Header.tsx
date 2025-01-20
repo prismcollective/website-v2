@@ -24,17 +24,17 @@ const Header = () => {
         </div>
 
         <nav className="flex gap-4">
-          <Button>
-            <Link href="/projects">PROJECTS</Link>
-          </Button>
-          <Button>
-            <Link href="/contact">CONTACT</Link>
-          </Button>
-          <Button variant="blue">
-            <Link href="https://discord.gg/EQW8Qu7jA9" target="_blank">
-              JOIN US
-            </Link>
-          </Button>
+          <Link href="/projects">
+            <Button>PROJECTS</Button>
+          </Link>
+
+          <Link href="/contact">
+            <Button>CONTACT</Button>
+          </Link>
+
+          <Link href="https://discord.gg/EQW8Qu7jA9" target="_blank">
+            <Button variant="blue">JOIN US</Button>
+          </Link>
         </nav>
       </div>
     </header>

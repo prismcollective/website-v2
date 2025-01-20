@@ -30,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${customFont.variable} ${azeretMono.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-[#FFF6ED] text-black`}
+        className={`${customFont.variable} ${azeretMono.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-[#FFF6ED] text-black h-full overflow-hidden`}
       >
         <Header />
 
