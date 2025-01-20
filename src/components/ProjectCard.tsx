@@ -31,7 +31,7 @@ export default function ProjectCard({
   return (
     <div
       key={title}
-      className="flex flex-col border-2 border-black shadow-[3px_3px_0px_0px_#000] w-[645px] h-[405px] bg-white"
+      className="flex flex-col border-2 border-black shadow-[3px_3px_0px_0px_#CCC] w-[645px] h-[405px] bg-white"
     >
       <div className="relative basis-2/3 border-b-2 border-black">
         <Image src={image} alt="Project Logo" fill className="object-cover" />
