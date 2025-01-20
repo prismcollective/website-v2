@@ -3,11 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
-
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const [selectedPage, setSelectedPage] = useState("home");
+  const pathname = usePathname();
+  const selectedPage = pathname === "/" ? "home" : pathname.replace("/", "");
 
   const pages = [
     {
@@ -33,7 +33,6 @@ const Header = () => {
                 alt="Prism Collective Logo"
                 fill
                 className="object-contain"
-                onClick={() => setSelectedPage("home")}
               />
             </Link>
           </div>
@@ -47,7 +46,6 @@ const Header = () => {
           {pages.map((page) => (
             <Link href={page.link} key={page.id}>
               <Button
-                onClick={() => setSelectedPage(page.id)}
                 variant={selectedPage === page.id ? "selected" : "default"}
               >
                 {page.label}
