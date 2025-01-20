@@ -1,8 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
 
+import { useState } from "react";
+
 const Header = () => {
+  const [selectedPage, setSelectedPage] = useState("home");
+
+  const pages = [
+    {
+      id: "projects",
+      label: "PROJECTS",
+      link: "/projects",
+    },
+    {
+      id: "contact",
+      label: "CONTACT",
+      link: "/contact",
+    },
+  ];
+
   return (
     <header className="w-full bg-gradient-to-r from-[#F9D5EB] to-[#E69AFD] px-6 py-2 border-b-2 border-black">
       <div className="flex justify-between items-center">
@@ -14,6 +33,7 @@ const Header = () => {
                 alt="Prism Collective Logo"
                 fill
                 className="object-contain"
+                onClick={() => setSelectedPage("home")}
               />
             </Link>
           </div>
@@ -24,13 +44,16 @@ const Header = () => {
         </div>
 
         <nav className="flex gap-4">
-          <Link href="/projects">
-            <Button>PROJECTS</Button>
-          </Link>
-
-          <Link href="/contact">
-            <Button>CONTACT</Button>
-          </Link>
+          {pages.map((page) => (
+            <Link href={page.link} key={page.id}>
+              <Button
+                onClick={() => setSelectedPage(page.id)}
+                variant={selectedPage === page.id ? "selected" : "default"}
+              >
+                {page.label}
+              </Button>
+            </Link>
+          ))}
 
           <Link href="https://discord.gg/EQW8Qu7jA9" target="_blank">
             <Button variant="blue">JOIN US</Button>
