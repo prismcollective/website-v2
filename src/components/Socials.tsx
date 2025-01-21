@@ -5,12 +5,14 @@ import { FaInstagram } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { VscGithubAlt } from "react-icons/vsc";
 
-export default function Socials() {
+export default function Socials({ email = true }: { email?: boolean }) {
   return (
     <div className="flex gap-6">
-      <Link href="mailto:prism@gmail.com" target="_blank">
-        <MdOutlineMail size={"30px"} className="cursor-pointer" />
-      </Link>
+      {email && (
+        <Link href="mailto:uwprism@gmail.com" target="_blank">
+          <MdOutlineMail size={"30px"} className="cursor-pointer" />
+        </Link>
+      )}
       <Link href="https://discord.gg/EQW8Qu7jA9" target="_blank">
         <RxDiscordLogo size={"30px"} className="cursor-pointer" />
       </Link>
