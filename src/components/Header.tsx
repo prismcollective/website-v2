@@ -148,7 +148,7 @@ const Header = () => {
               variant="blue"
               className="shine-effect text-black border border-black shadow-[2px_2px_0px_0px_#000] rounded-full px-6 py-2 transition-colors bg-blue-200 hover:bg-blue-300"
             >
-              <span className="relative ">JOIN US</span>
+              <span className="relative font-bold">JOIN US</span>
             </Button>
           </Link>
         </nav>
