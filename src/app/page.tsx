@@ -32,8 +32,8 @@ export default function Home() {
           </div>
           <div className="flex flex-col flex-1">
             <div className="bg-[#FEE4D4] flex flex-1 border-b-2 border-black items-center justify-center p-6">
-              AN INTERDISCIPLINARY DESIGN TEAM TO CHALLENGE THE STATUS QUO AND
-              ENCOURAGE NEW FORMS OF EXPRESSION
+              PRISM IS AN INTERDISCIPLINARY DESIGN TEAM TO CHALLENGE THE STATUS
+              QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
             </div>
             <div className="flex-1 border-b-2 border-black flex items-center justify-center p-6"></div>
             <div className="bg-[#DFF9F6] flex-1 flex flex-col gap-5 items-left justify-center p-6">
