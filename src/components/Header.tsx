@@ -4,12 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const Header = () => {
   const pathname = usePathname();
   const selectedPage = pathname === "/" ? "home" : pathname.replace("/", "");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const pages = [
+  const desktopPages = [
     {
       id: "projects",
       label: "PROJECTS",
@@ -17,9 +19,18 @@ const Header = () => {
     },
     {
       id: "contact",
-      label: "CONTACT",
+      label: "CONTACT US",
       link: "/contact",
     },
+  ];
+
+  const mobilePages = [
+    {
+      id: "home",
+      label: "HOME",
+      link: "/",
+    },
+    ...desktopPages
   ];
 
   return (
@@ -118,7 +129,7 @@ const Header = () => {
           <div className="w-12 h-12 relative">
             <Link href="/">
               <Image
-                src="/prism-logo.png" // You'll need to add your logo to public folder
+                src="/prism-logo.png"
                 alt="Prism Collective Logo"
                 width={48}
                 height={48}
@@ -132,8 +143,8 @@ const Header = () => {
           </div>
         </div>
 
-        <nav className="flex gap-4">
-          {pages.map((page) => (
+        <nav className="hidden md:flex gap-4">
+          {desktopPages.map((page) => (
             <Link href={page.link} key={page.id}>
               <Button
                 variant={selectedPage === page.id ? "selected" : "default"}
@@ -142,17 +153,60 @@ const Header = () => {
               </Button>
             </Link>
           ))}
-
           <Link href="https://discord.gg/EQW8Qu7jA9" target="_blank">
-            <Button
-              variant="blue"
-              className="shine-effect text-black border border-black shadow-[2px_2px_0px_0px_#000] rounded-full px-6 py-2 transition-colors bg-blue-200 hover:bg-blue-300"
-            >
+            <Button variant="blue" className="shine-effect">
               <span className="relative font-bold">JOIN US</span>
             </Button>
           </Link>
         </nav>
+
+        <button 
+          className="md:hidden flex flex-col gap-1.5 p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <div className="w-6 h-0.5 bg-black"></div>
+          <div className="w-6 h-0.5 bg-black"></div>
+          <div className="w-6 h-0.5 bg-black"></div>
+        </button>
       </div>
+
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-[#E69AFD] z-50 md:hidden">
+          <div className="p-6 flex flex-col h-full">
+            <div className="flex justify-end">
+              <button 
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 text-2xl"
+              >
+                ×
+              </button>
+            </div>
+            <nav className="flex flex-col items-center justify-center flex-1 gap-8">
+              {mobilePages.map((page) => (
+                <Link 
+                  href={page.link} 
+                  key={page.id}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-black font-mono ${
+                    selectedPage === page.id ? 'font-bold' : ''
+                  }`}
+                >
+                  {page.label}
+                </Link>
+              ))}
+              <Link 
+                href="https://discord.gg/EQW8Qu7jA9" 
+                target="_blank"
+                className="mt-4"
+              >
+                <Button variant="blue" className="shine-effect">
+                  <span className="relative font-bold">Join Us →</span>
+                </Button>
+              </Link>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
