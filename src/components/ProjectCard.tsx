@@ -65,16 +65,25 @@ export default function ProjectCard({
           </div>
         </div>
 
-        <div className="flex md:basis-1/3 flex-col p-4 md:p-6 border-t-2 md:border-t-0 border-black gap-2">
-          <div className="p-3 border-2 border-black text-xs flex-auto">
-            <div className="font-bold">Team Leads</div>
-            {team.map((member) => {
-              return <div key={member}>{member}</div>;
-            })}
-          </div>
+        <div className="flex md:basis-1/3 flex-col p-4 md:p-6  md:border-t-0 border-black gap-5">
+        <div className="text-xs flex-auto md:border-2 md:border-black md:p-3">
+    <div className="font-mono">
+      <span className="font-bold">Team Leads: </span>
+      <span className="md:hidden">{team.join(", ")}</span>
+    </div>
+    <div className="hidden md:block font-normal">
+      {team.map((member) => (
+        <div key={member}>{member}</div>
+      ))}
+    </div>
+  </div>
+          
           <div className="flex justify-between gap-1">
             <Link href={notion} target="_blank" className="flex-1 md:flex-none">
-            <Button variant="purple"   className="w-full md:w-auto text-center">Learn More</Button>                         </Link>
+              <Button variant="purple" className="w-full md:w-auto text-center">
+                Learn More
+              </Button>
+            </Link>
             <Link href={github} target="_blank">
               <button className="border-black border-2 shadow-[2px_2px_0px_0px_#000] rounded-md px-1 h-7 bg-white hover:bg-gray-200 transition-colors">
                 <VscGithubAlt />
