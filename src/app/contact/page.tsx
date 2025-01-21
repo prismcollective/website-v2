@@ -84,10 +84,9 @@ export default function Page() {
           </div>
           <div className="flex-1">
             <h3>Message</h3>
-            <input
-              type="text"
+            <textarea
               placeholder="HONK HONK HONK"
-              className="border-2 border-black p-2 w-full h-full resize-none"
+              className="border-2 border-black p-2 w-full h-full resize-none align-top"
               value={formData.message}
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
