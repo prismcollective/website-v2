@@ -5,26 +5,56 @@ import { FaInstagram } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { VscGithubAlt } from "react-icons/vsc";
 
-export default function Socials({ email = true }: { email?: boolean }) {
+interface SocialsProps {
+  email?: boolean;
+  variant?: 'default' | 'contact';
+}
+
+export default function Socials({ email = true, variant = 'default' }: SocialsProps) {
+  const links = [
+    {
+      href: "https://discord.gg/EQW8Qu7jA9",
+      icon: RxDiscordLogo,
+      label: "Discord"
+    },
+    {
+      href: "https://instagram.com/uwprism",
+      icon: FaInstagram,
+      label: "Instagram"
+    },
+    {
+      href: "https://x.com/uwprism",
+      icon: RiTwitterXFill,
+      label: "Twitter"
+    },
+    {
+      href: "https://github.com/Waterloo-prism",
+      icon: VscGithubAlt,
+      label: "Github"
+    }
+  ];
+
+  if (email) {
+    links.unshift({
+      href: "mailto:uwprism@gmail.com",
+      icon: MdOutlineMail,
+      label: "Email"
+    });
+  }
+
   return (
-    <div className="flex gap-6">
-      {email && (
-        <Link href="mailto:uwprism@gmail.com" target="_blank">
-          <MdOutlineMail size={"30px"} className="cursor-pointer" />
+    <div className={`flex ${variant === 'contact' ? 'flex-col md:flex-row' : ''} gap-6`}>
+      {links.map(({ href, icon: Icon, label }) => (
+        <Link 
+          key={href} 
+          href={href} 
+          target="_blank" 
+          className="flex items-center gap-2 font-mono"
+        >
+          <Icon size={"30px"} className="cursor-pointer" />
+          {variant === 'contact' && <span className="hover:underline">{label}</span>}
         </Link>
-      )}
-      <Link href="https://discord.gg/EQW8Qu7jA9" target="_blank">
-        <RxDiscordLogo size={"30px"} className="cursor-pointer" />
-      </Link>
-      <Link href="https://instagram.com/uwprism" target="_blank">
-        <FaInstagram size={"30px"} className="cursor-pointer" />
-      </Link>
-      <Link href="https://x.com/uwprism" target="_blank">
-        <RiTwitterXFill size={"30px"} className="cursor-pointer" />
-      </Link>
-      <Link href="https://github.com/Waterloo-prism" target="_blank">
-        <VscGithubAlt size={"30px"} className="cursor-pointer" />
-      </Link>
+      ))}
     </div>
   );
 }
