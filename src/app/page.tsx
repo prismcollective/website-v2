@@ -1,17 +1,12 @@
 import Banner from "@/components/Banner";
 import Spline from "@splinetool/react-spline";
 import Link from "next/link";
-import { MdOutlineMail } from "react-icons/md";
-import { RxDiscordLogo } from "react-icons/rx";
-import { FaInstagram } from "react-icons/fa";
-import { RiTwitterXFill } from "react-icons/ri";
-import { VscGithubAlt } from "react-icons/vsc";
-import { IconContext } from "react-icons";
+import Socials from "@/components/Socials";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-[calc(100%-69px)]">
-      <div className="flex-auto flex">
+    <div className="flex flex-col flex-1">
+      <div className="flex-1 flex">
         <div className="flex flex-1 border-r-2 border-black">
           <Spline scene="https://prod.spline.design/83p7cqnLefSNPoYy/scene.splinecode" />
         </div>
@@ -40,23 +35,7 @@ export default function Home() {
             <div className="flex-1 border-b-2 border-black flex items-center justify-center p-6"></div>
             <div className="bg-[#DFF9F6] flex-1 flex flex-col gap-5 items-left justify-center p-6">
               <div className="font-bold">CONNECT WITH US</div>
-              <div className="flex gap-6">
-                <Link href="mailto:prism@gmail.com" target="_blank">
-                  <MdOutlineMail size={"30px"} className="cursor-pointer" />
-                </Link>
-                <Link href="https://discord.gg/EQW8Qu7jA9" target="_blank">
-                  <RxDiscordLogo size={"30px"} className="cursor-pointer" />
-                </Link>
-                <Link href="https://instagram.com/uwprism" target="_blank">
-                  <FaInstagram size={"30px"} className="cursor-pointer" />
-                </Link>
-                <Link href="https://x.com/uwprism" target="_blank">
-                  <RiTwitterXFill size={"30px"} className="cursor-pointer" />
-                </Link>
-                <Link href="https://github.com/Waterloo-prism" target="_blank">
-                  <VscGithubAlt size={"30px"} className="cursor-pointer" />
-                </Link>
-              </div>
+              <Socials />
             </div>
           </div>
         </div>
