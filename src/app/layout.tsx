@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Azeret_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { customFont } from "./fonts";
+import NavigationEvents from '@/components/NavigationEvents'
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +36,8 @@ export default function RootLayout({
       <body
         className={`${customFont.variable} ${azeretMono.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-[#FFF6ED] text-black h-full overflow-hidden flex flex-col`}
       >
+                <NavigationEvents />
+
         <Header />
 
         {children}
