@@ -5,19 +5,19 @@ export default function Banner() {
     <div className="relative w-full overflow-hidden bg-black py-4">
       <div className="animate-scroll-left flex whitespace-nowrap">
         <span className="text-white mx-4">
-          ART TECH AT THE UNIVERSITY OF WATERLOO.
+          THE INTERSECTION OF ART AND TECHNOLOGY.
         </span>
         <span className="text-white mx-4">
-          ART TECH AT THE UNIVERSITY OF WATERLOO.
+          THE INTERSECTION OF ART AND TECHNOLOGY.
         </span>
         <span className="text-white mx-4">
-          ART TECH AT THE UNIVERSITY OF WATERLOO.
+          THE INTERSECTION OF ART AND TECHNOLOGY.
         </span>
         <span className="text-white mx-4">
-          ART TECH AT THE UNIVERSITY OF WATERLOO.
+          THE INTERSECTION OF ART AND TECHNOLOGY.
         </span>
         <span className="text-white mx-4">
-          ART TECH AT THE UNIVERSITY OF WATERLOO.
+          THE INTERSECTION OF ART AND TECHNOLOGY.
         </span>
       </div>
     </div>

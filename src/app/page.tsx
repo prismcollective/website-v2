@@ -7,8 +7,11 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1">
       <div className="flex-1 flex">
-        <div className="flex flex-1 border-r-2 border-black">
+        <div className="flex flex-1 border-r-2 border-black relative">
           <Spline scene="https://prod.spline.design/83p7cqnLefSNPoYy/scene.splinecode" />
+          <div className="absolute top-6 left-6 text-6xl w-80 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">
+            ART TECH AT THE UNIVERSITY OF WATERLOO
+          </div>
         </div>
         <div className="flex flex-1">
           <div className="flex flex-col flex-1 border-r-2 border-black">

@@ -23,7 +23,7 @@ export default {
         },
       },
       animation: {
-        "scroll-left": "scroll-left 28s linear infinite",
+        "scroll-left": "scroll-left 26s linear infinite",
       },
     },
   },

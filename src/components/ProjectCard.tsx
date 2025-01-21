@@ -39,7 +39,7 @@ export default function ProjectCard({
 
       <div className="flex">
         <div className="flex flex-col border-black">
-          <div className="p-6 flex-auto border-r-2 border-b-2 border-black">
+          <div className="p-4 flex-1 border-r-2 border-b-2 text-2xl border-black">
             {title}
           </div>
           <div className="flex flex-row">
@@ -56,7 +56,7 @@ export default function ProjectCard({
               );
             })}
           </div>
-          <div className="flex-auto p-6 border-r-2 border-t-2 border-black">
+          <div className="flex-auto p-4 border-r-2 border-t-2 border-black">
             {description}
           </div>
         </div>
