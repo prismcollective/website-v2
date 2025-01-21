@@ -22,7 +22,8 @@ export default function Button({
     <button
       className={cn(
         "text-black border border-black shadow-[2px_2px_0px_0px_#000] rounded-full px-6 py-2 transition-colors",
-        variants[variant]
+        variants[variant],
+        props.className
       )}
       {...props}
     >
