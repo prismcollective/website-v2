@@ -16,7 +16,7 @@ export default function Button({
     selected: "shadow-inner shadow-[inset_2px_2px_0px_0px_#000] bg-[#FDD6BF]",
     blue: "bg-blue-200 hover:bg-blue-300",
     purple: "bg-[#F1C5FE] hover:bg-[#E9A8FD] text-xs h-7 flex items-center rounded-md  justify-center",
-    "contact-purple": "rounded-md bg-[#F1C5FE] hover:bg-[#E9A8FD] text-sm px-8 py-2", // New variant for contact page
+    "contact-purple": "rounded-md bg-[#F1C5FE] hover:bg-[#E9A8FD] text-sm px-8 py-2", 
 
   };
 

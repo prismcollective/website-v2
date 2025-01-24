@@ -47,7 +47,9 @@ export default function Page() {
     <div className="h-[calc(100vh-theme(spacing.16))] overflow-y-auto px-4 py-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12">
       <div className="flex-1 bg-white p-6 md:p-8 border-2 border-black flex flex-col gap-6 md:gap-8 shadow-[3px_3px_0px_0px_#CCC] h-fit">
         <h1 className="font-bold text-lg font-mono">Support us!</h1>
-        <p>Lorem ipsum yada yada</p>
+        <p>We are always on the lookout for funding! Help us bring the next art-tech project to life.
+Please reach out to uwprism@gmail.com to support the most creative engineers and researchers in Waterloo!
+        </p>
       </div>
 
       <div className="flex flex-col flex-1 gap-6 md:gap-12 min-h-0">
@@ -93,7 +95,7 @@ export default function Page() {
           <div className="flex-1 min-h-0">
             <h3 className="font-bold ">Message</h3>
             <textarea
-              placeholder="I love your website woooow"
+              placeholder="HONK HONK HONK"
               className="border-2 border-black p-2 w-full h-32 resize-none font-mono"
               value={formData.message}
               onChange={(e) =>

@@ -4,12 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const pathname = usePathname();
   const selectedPage = pathname === "/" ? "home" : pathname.replace("/", "");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const desktopPages = [
     {
@@ -170,7 +174,7 @@ const Header = () => {
         </button>
       </div>
 
-      {isMenuOpen && (
+      {mounted && isMenuOpen && (
         <div className="fixed inset-0 bg-[#E69AFD] z-50 md:hidden">
           <div className="p-6 flex flex-col h-full">
             <div className="flex justify-end">

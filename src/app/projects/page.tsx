@@ -7,7 +7,7 @@ export default function Page() {
       title: "MIND GARDEN - 2024-2025",
       image: "/mind-garden.png",
       genres: ["mechanical", "electrical", "embedded"],
-      description: "A bit about the super cool mind garden",
+      description: "Our first piece is a kinetic sculpture is inspired by the human mind… a vibrant, ever-changing ecosystem of thoughts, emotions, and ideas.",
       team: ["Sophie", "Maisha", "Binal", "Olivia"],
       notion:
         "https://prismcollective.notion.site/Mind-Garden-Living-Doc-13d5aba77f188129bd97d9338e06aa5c?pvs=74",
