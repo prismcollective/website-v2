@@ -30,6 +30,7 @@ const azeretMono = Azeret_Mono({
 });
 
 // Create a client-side only footer wrapper
+/*
 function MobileFooter() {
   'use client'
   
@@ -50,6 +51,7 @@ function MobileFooter() {
   
   return <Footer />;
 }
+*/
 export default function RootLayout({
   children,
 }: Readonly<{
