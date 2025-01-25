@@ -48,7 +48,7 @@ export default function Page() {
       <div className="flex-1 bg-white p-6 md:p-8 border-2 border-black flex flex-col gap-6 md:gap-8 shadow-[3px_3px_0px_0px_#CCC] h-fit">
         <h1 className="font-bold text-lg font-mono">Support us!</h1>
         <p>We are always on the lookout for funding! Help us bring the next art-tech project to life.
-Please reach out to uwprism@gmail.com to support the most creative engineers and researchers in Waterloo!
+Please reach out to <b>uwprism@gmail.com </b>to support the most creative engineers and researchers in Waterloo!
         </p>
       </div>
 
