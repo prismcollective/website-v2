@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { customFont } from "./fonts";
 import NavigationEvents from '@/components/NavigationEvents'
+import { Suspense } from 'react'
+
 
 
 const geistSans = Geist({
@@ -32,7 +34,9 @@ export default function RootLayout({
       <body
         className={`${customFont.variable} ${azeretMono.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-[#FFF6ED] text-black h-full overflow-hidden flex flex-col`}
       >
-        <NavigationEvents/>
+        <Suspense fallback={null}>
+          <NavigationEvents />
+        </Suspense>
         <Header />
       
 

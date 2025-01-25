@@ -1,8 +1,12 @@
 'use client'
-import { useEffect } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
 
-export default function NavigationEvents() {
+import { Suspense } from 'react'
+import { usePathname, useSearchParams } from 'next/navigation'
+import { useState, useEffect } from 'react';
+
+
+// Separate component for navigation events
+function NavigationEventsContent() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -16,4 +20,13 @@ export default function NavigationEvents() {
   }, [pathname, searchParams])
 
   return null
+}
+
+// Wrapper component with Suspense
+export default function NavigationEvents() {
+  return (
+    <Suspense fallback={null}>
+      <NavigationEventsContent />
+    </Suspense>
+  )
 }
