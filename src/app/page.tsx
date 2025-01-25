@@ -28,9 +28,7 @@ export default function Home() {
   if (isMobile) {
     return (
       <div className="min-h-screen w-full overflow-y-auto">
-        {/* Main Content */}
         <div className="w-full">
-          {/* Spline Section */}
           <div className="relative h-[500px] border-b-2 border-black">
             <Spline scene="https://prod.spline.design/83p7cqnLefSNPoYy/scene.splinecode" />
             <div className="absolute top-6 left-6 text-4xl w-64 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">
@@ -38,7 +36,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Description Section */}
           <div className="bg-[#FEE4D4] p-6 border-b-2 border-black">
             PRISM IS AN INTERDISCIPLINARY DESIGN TEAM TO CHALLENGE THE STATUS QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
           </div>
@@ -64,7 +61,6 @@ export default function Home() {
           <div className="h-[300px] border-b-2 border-black">
           </div>
 
-          {/* The Intersection Text */}
           <Banner />
          <Footer />
 

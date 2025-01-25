@@ -8,7 +8,6 @@ const Footer = () => {
     return (
       <div className="bg-[#DFF9F6] p-8 border-b-2 border-black">
         <div className="flex justify-between items-start">
-          {/* Left content */}
           <div className="flex flex-col">
             <h1 className="text-6xl mb-4 font-metro">PRISM</h1>
             <p className="mb-4">
@@ -22,7 +21,6 @@ const Footer = () => {
           </Button>
           </div>
           
-          {/* Right aligned vertical socials */}
           <div className="flex flex-col gap-6">
           <Socials email={false} variant="contact" />
           </div>
