@@ -1,3 +1,5 @@
+"use client"
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Azeret_Mono } from "next/font/google";
 import "./globals.css";
@@ -5,6 +7,10 @@ import Header from "@/components/Header";
 import { customFont } from "./fonts";
 import NavigationEvents from '@/components/NavigationEvents'
 import { Suspense } from 'react'
+import { useState, useEffect } from 'react';
+import Footer from "@/components/Footer";
+import ClientOnly from "@/components/ClientOnly";
+
 
 
 
@@ -23,7 +29,27 @@ const azeretMono = Azeret_Mono({
   variable: "--font-azeret-mono",
 });
 
+// Create a client-side only footer wrapper
+function MobileFooter() {
+  'use client'
+  
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  if (!isMobile) return null;
+  
+  return <Footer />;
+}
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,11 +64,12 @@ export default function RootLayout({
           <NavigationEvents />
         </Suspense>
         <Header />
-      
-
-
+        
         {children}
-
+        
+        {/*<ClientOnly>
+          <MobileFooter />
+        </ClientOnly>*/}
       </body>
     </html>
   );
