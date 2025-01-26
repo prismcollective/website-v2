@@ -34,7 +34,7 @@ const Header = () => {
       label: "HOME",
       link: "/",
     },
-    ...desktopPages
+    ...desktopPages,
   ];
 
   return (
@@ -164,8 +164,8 @@ const Header = () => {
           </Link>
         </nav>
 
-        <button 
-          className="md:hidden flex flex-col gap-1.5 p-2"
+        <button
+          className="md:hidden flex flex-col gap-1.5 p-1.5"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <div className="w-6 h-0.5 bg-black"></div>
@@ -174,34 +174,38 @@ const Header = () => {
         </button>
       </div>
 
-      {mounted && isMenuOpen && (
-        <div className="fixed inset-0 bg-[#E69AFD] z-50 md:hidden">
+      {mounted && (
+        <div
+          className={`fixed inset-0 bg-[#E69AFD] z-50 md:hidden transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
           <div className="p-6 flex flex-col h-full">
             <div className="flex justify-end">
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-2 text-2xl"
               >
                 ×
               </button>
             </div>
-            <nav className="flex flex-col items-center justify-center flex-1 gap-8">
+            <nav className="flex flex-col items-center justify-center flex-1 gap-12">
               {mobilePages.map((page) => (
-                <Link 
-                  href={page.link} 
+                <Link
+                  href={page.link}
                   key={page.id}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`text-black font-mono ${
-                    selectedPage === page.id ? 'font-bold' : ''
+                  className={`text-black font-mono hover:underline text-lg ${
+                    selectedPage === page.id ? "font-bold" : ""
                   }`}
                 >
                   {page.label}
                 </Link>
               ))}
-              <Link 
-                href="https://discord.gg/EQW8Qu7jA9" 
+              <Link
+                href="https://discord.gg/EQW8Qu7jA9"
                 target="_blank"
-                className="mt-4"
+                // className="mt-4"
               >
                 <Button variant="blue" className="shine-effect">
                   <span className="relative font-bold">Join Us →</span>
