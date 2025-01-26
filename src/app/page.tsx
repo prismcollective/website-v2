@@ -117,7 +117,7 @@ export default function Home() {
             <div className="h-1/3 bg-[#FEE4D4] flex border-b-2 border-black items-center justify-center p-6">
               PRISM IS AN INTERDISCIPLINARY DESIGN TEAM TO CHALLENGE THE STATUS QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
             </div>
-            <div className="h-[500px] border-b-2 border-black relative w-full">
+            <div className="h-[600px] border-b-2 border-black relative w-full">
               <Image
                 src="/mind-garden-cad.webp"
                 alt="Project showcase 3"
