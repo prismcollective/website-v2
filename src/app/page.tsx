@@ -26,8 +26,8 @@ export default function Home() {
 
   if (isMobile) {
     return (
-      <div className="min-h-screen w-full overflow-y-auto">
-        <div className="w-full">
+      <div className="min-h-screen w-full overflow-y-auto flex flex-col">
+        <div className="w-full pb-[70px]">
           <div className="relative h-[500px] border-b-2 border-black">
             <Spline scene="https://prod.spline.design/83p7cqnLefSNPoYy/scene.splinecode" />
             <div className="absolute top-6 left-6 text-4xl w-64 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">
