@@ -8,10 +8,7 @@ import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
-export const metadata = {
-  title: 'Home - PRISM Collective',
-  description: 'Welcome to PRISM - Art Tech at the University of Waterloo',
-};
+
 
 
 export default function Home() {

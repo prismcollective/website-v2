@@ -5,10 +5,6 @@ import Socials from "@/components/Socials";
 import { FormEvent, useState } from "react";
 
 
-export const metadata = {
-  title: 'Contact - PRISM Collective',
-  description: 'Contact PRISM - Art Tech at the University of Waterloo',
-};
 
 export default function Page() {
   const [formData, setFormData] = useState({
