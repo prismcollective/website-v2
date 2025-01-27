@@ -119,8 +119,8 @@ const HolographicEffect: React.FC<HolographicEffectProps> = ({ className }) => {
     const material = new THREE.ShaderMaterial({
       uniforms: {
         time: { value: 0 },
-        color1: { value: new THREE.Color(0xda70d6) }, // Orchid purple-pink
-        color2: { value: new THREE.Color(0xb6a4ff) }, // Purple
+        color1: { value: new THREE.Color(0x87d9ff) }, // Light blue
+        color2: { value: new THREE.Color(0xda70d6) }, // Orchid purple-pink
         color3: { value: new THREE.Color(0xff9ee8) }, // Pink
       },
       vertexShader,
