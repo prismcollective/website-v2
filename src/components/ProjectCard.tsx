@@ -29,10 +29,7 @@ export default function ProjectCard({
   };
 
   return (
-    <div
-      key={title}
-      className="flex flex-col border-2 border-black shadow-[3px_3px_0px_0px_#CCC] w-full max-w-[645px] bg-white"
-    >
+    <div className="flex flex-col border-2 border-black shadow-[3px_3px_0px_0px_#CCC] w-full max-w-[645px] bg-white">
       <div className="relative w-full h-48 md:h-64 border-b-2 border-black">
         <Image src={image} alt="Project Logo" fill className="object-cover" />
       </div>
@@ -66,18 +63,18 @@ export default function ProjectCard({
         </div>
 
         <div className="flex md:basis-1/3 flex-col p-4 md:p-6  md:border-t-0 border-black gap-5">
-        <div className="text-xs flex-auto md:border-2 md:border-black md:p-3">
-    <div className="font-mono">
-      <span className="font-bold">Team Leads: </span>
-      <span className="md:hidden">{team.join(", ")}</span>
-    </div>
-    <div className="hidden md:block font-normal">
-      {team.map((member) => (
-        <div key={member}>{member}</div>
-      ))}
-    </div>
-  </div>
-          
+          <div className="text-xs flex-auto md:border-2 md:border-black md:p-3">
+            <div className="font-mono">
+              <span className="font-bold">Team Leads: </span>
+              <span className="md:hidden">{team.join(", ")}</span>
+            </div>
+            <div className="hidden md:block font-normal">
+              {team.map((member) => (
+                <div key={member}>{member}</div>
+              ))}
+            </div>
+          </div>
+
           <div className="flex justify-between gap-1">
             <Link href={notion} target="_blank" className="flex-1 md:flex-none">
               <Button variant="purple" className="w-full md:w-auto text-center">
