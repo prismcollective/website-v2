@@ -8,6 +8,12 @@ import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
+export const metadata = {
+  title: 'Home - PRISM Collective',
+  description: 'Welcome to PRISM - Art Tech at the University of Waterloo',
+};
+
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -23,7 +29,7 @@ export default function Home() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
+ 
   if (isMobile) {
     return (
       <div className="min-h-screen w-full overflow-y-auto flex flex-col">

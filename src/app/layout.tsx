@@ -52,6 +52,8 @@ function MobileFooter() {
   return <Footer />;
 }
 */
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

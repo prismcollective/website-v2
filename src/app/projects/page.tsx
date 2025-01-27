@@ -1,6 +1,13 @@
 import ProjectCard from "@/components/ProjectCard";
 import { ProjectCardProps } from "@/components/ProjectCard";
 
+
+export const metadata = {
+  title: 'Projects - PRISM Collective',
+  description: 'Welcome to PRISM projects - Art Tech at the University of Waterloo',
+};
+
+
 export default function Page() {
   const projects: Array<ProjectCardProps> = [
     {
