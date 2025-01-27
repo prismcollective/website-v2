@@ -7,6 +7,8 @@ import Socials from "@/components/Socials";
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import HolographicEffect from '@/components/Holograph';
+
 
 
 
@@ -31,12 +33,12 @@ export default function Home() {
     return (
       <div className="min-h-screen w-full overflow-y-auto flex flex-col">
         <div className="w-full pb-[70px]">
-          <div className="relative h-[500px] border-b-2 border-black">
-            <Spline scene="https://prod.spline.design/83p7cqnLefSNPoYy/scene.splinecode" />
-            <div className="absolute top-6 left-6 text-4xl w-64 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">
-              ART TECH AT THE UNIVERSITY OF WATERLOO
-            </div>
-          </div>
+        <div className="relative h-[500px] border-b-2 border-black">
+        <HolographicEffect className="w-full h-full absolute inset-0" />
+  <div className="absolute top-6 left-6 text-4xl w-64 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">
+    ART TECH AT THE UNIVERSITY OF WATERLOO
+  </div>
+</div>
 
           <div className="bg-[#FEE4D4] p-6 border-b-2 border-black">
             PRISM IS AN INTERDISCIPLINARY DESIGN TEAM TO CHALLENGE THE STATUS QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
@@ -82,7 +84,8 @@ export default function Home() {
     <div className="flex flex-col flex-1">
       <div className="flex-1 flex">
         <div className="flex flex-1 border-r-2 border-black relative">
-          <Spline scene="https://prod.spline.design/83p7cqnLefSNPoYy/scene.splinecode" />
+        <HolographicEffect className="w-full h-full absolute inset-0" />
+
           <div className="absolute top-6 left-6 text-6xl w-80 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">
             ART TECH AT THE UNIVERSITY OF WATERLOO
           </div>
