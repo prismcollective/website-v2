@@ -37,8 +37,8 @@ export default function Home() {
           </div>
 
           <div className="bg-[#FEE4D4] p-6 border-b-2 border-black">
-            PRISM IS AN INTERDISCIPLINARY DESIGN TEAM TO CHALLENGE THE STATUS
-            QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
+            PRISM IS A BOUNDARY-BREAKING DESIGN TEAM TO CHALLENGE THE STATUS QUO
+            AND ENCOURAGE NEW FORMS OF EXPRESSION
           </div>
 
           <div className="h-[500px] border-b-2 border-black relative">
@@ -122,10 +122,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col flex-1">
             <div className="h-1/3 bg-[#FEE4D4] flex border-b-2 border-black items-center justify-center p-6">
-              PRISM IS AN INTERDISCIPLINARY DESIGN TEAM TO CHALLENGE THE STATUS
+              PRISM IS A BOUNDARY-BREAKING DESIGN TEAM TO CHALLENGE THE STATUS
               QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
             </div>
-            <div className="h-[400px] border-b-2 border-black relative w-full">
+            <div className="flex-1 border-b-2 border-black relative w-full">
               <Image
                 src="/mind-garden-cad.png"
                 alt="Project showcase 3"
@@ -134,11 +134,11 @@ export default function Home() {
                 className="object-contain w-full h-full "
               />
             </div>
-            <div className="flex-1 flex flex-col">
-              <div className="bg-[#DFF9F6] flex-1 flex flex-col gap-5 items-left justify-center p-6">
-                <div className="font-bold">CONNECT WITH US</div>
-                <Socials />
-              </div>
+
+            <div className="bg-[#DFF9F6] flex-1 flex flex-col gap-5 justify-center p-6">
+              <h1 className="text-6xl font-metro">PRISM</h1>
+              <p>MAKE WATERLOO MORE INTERDISCIPLINARY</p>
+              <Socials />
             </div>
           </div>
         </div>
