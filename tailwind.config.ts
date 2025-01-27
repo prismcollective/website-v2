@@ -21,9 +21,14 @@ export default {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
         },
+        "scroll-left-fast": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-75%)" },
+        },
       },
       animation: {
         "scroll-left": "scroll-left 26s linear infinite",
+        "scroll-left-fast": "scroll-left-fast 16s linear infinite",
       },
     },
   },
