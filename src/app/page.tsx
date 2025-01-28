@@ -41,12 +41,12 @@ export default function Home() {
             AND ENCOURAGE NEW FORMS OF EXPRESSION
           </div>
 
-          <div className="h-[500px] border-b-2 border-black relative">
+          <div className="h-[400px] border-b-2 border-black relative">
             <Image
               src="/mind-garden-cad.png"
               alt="Project showcase 1"
               fill
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
             />
           </div>
 
