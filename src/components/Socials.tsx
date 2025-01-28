@@ -7,52 +7,61 @@ import { VscGithubAlt } from "react-icons/vsc";
 
 interface SocialsProps {
   email?: boolean;
-  variant?: 'default' | 'contact';
+  variant?: "default" | "contact";
 }
 
-export default function Socials({ email = true, variant = 'default' }: SocialsProps) {
+export default function Socials({
+  email = true,
+  variant = "default",
+}: SocialsProps) {
   const links = [
     {
       href: "https://discord.gg/EQW8Qu7jA9",
       icon: RxDiscordLogo,
-      label: "Discord"
+      label: "Discord",
     },
     {
       href: "https://instagram.com/uwprism",
       icon: FaInstagram,
-      label: "Instagram"
+      label: "Instagram",
     },
     {
       href: "https://x.com/uwprism",
       icon: RiTwitterXFill,
-      label: "Twitter"
+      label: "Twitter",
     },
     {
       href: "https://github.com/Waterloo-prism",
       icon: VscGithubAlt,
-      label: "Github"
-    }
+      label: "Github",
+    },
   ];
 
   if (email) {
     links.unshift({
       href: "mailto:uwprism@gmail.com",
       icon: MdOutlineMail,
-      label: "Email"
+      label: "Email",
     });
   }
 
   return (
-    <div className={`flex ${variant === 'contact' ? 'flex-col md:flex-row' : ''} gap-6`}>
+    <div
+      className={`flex ${
+        variant === "contact" ? "flex-col md:flex-row" : ""
+      } gap-6 justify-between`}
+    >
       {links.map(({ href, icon: Icon, label }) => (
-        <Link 
-          key={href} 
-          href={href} 
-          target="_blank" 
+        <Link
+          key={href}
+          href={href}
+          target="_blank"
           className="flex items-center gap-2 font-mono"
         >
           <Icon size={"30px"} className="cursor-pointer" />
-          {variant === 'contact' && <span className="hover:underline">{label}</span>}
+          {variant === "contact" && (
+            <span className="hover:underline">{label}</span>
+          )}
         </Link>
       ))}
     </div>
