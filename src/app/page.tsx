@@ -89,9 +89,9 @@ export default function Home() {
             ART TECH AT THE UNIVERSITY OF WATERLOO
           </div>
         </div>
-        <div className="flex flex-1">
-          <div className="flex flex-col flex-1 border-r-2 border-black">
-            <div className="flex-1 border-b-2 border-black relative w-full">
+        <div className="flex flex-1 flex-col">
+          <div className="flex flex-1 border-b-2 border-black">
+            <div className="relative w-1/2">
               <Image
                 src="/sculpture-mind-garden.webp"
                 alt="Project showcase 1"
@@ -99,7 +99,13 @@ export default function Home() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="flex-1 flex flex-col gap-5 items-center justify-center p-6 border-b-2 border-black bg-[#A3D5F8]">
+            <div className="w-1/2 bg-[#FEE4D4] flex border-l-2 border-black  items-center justify-center p-6">
+              PRISM IS A BOUNDARY-BREAKING DESIGN TEAM TO CHALLENGE THE STATUS
+              QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
+            </div>
+          </div>
+          <div className="flex flex-1 border-b-2 border-black">
+            <div className="w-1/2 relative flex flex-col gap-5 items-center justify-center p-6 bg-[#A3D5F8]">
               <div>
                 KINETIC SCULPTURES / GENERATIVE ART / PROJECTION MAPPING /
                 BIO-ART / IMMERSIVE EXPERIENCES / AUGMENTED/VIRTUAL REALTIY /
@@ -111,21 +117,7 @@ export default function Home() {
                 </div>
               </Link>
             </div>
-            <div className="flex-1 relative w-full">
-              <Image
-                src="/jellyfish-sculpture.png"
-                alt="Project showcase 2"
-                fill
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col flex-1">
-            <div className="h-1/3 bg-[#FEE4D4] flex border-b-2 border-black items-center justify-center p-6">
-              PRISM IS A BOUNDARY-BREAKING DESIGN TEAM TO CHALLENGE THE STATUS
-              QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
-            </div>
-            <div className="flex-1 border-b-2 border-black relative w-full">
+            <div className="relative w-1/2 border-l-2 border-black">
               <Image
                 src="/mind-garden-cad.png"
                 alt="Project showcase 3"
@@ -134,8 +126,18 @@ export default function Home() {
                 className="object-contain w-full h-full "
               />
             </div>
+          </div>
 
-            <div className="bg-[#DFF9F6] flex-1 flex flex-col gap-5 justify-center p-6">
+          <div className="flex flex-1">
+            <div className="relative w-1/2">
+              <Image
+                src="/jellyfish-sculpture.png"
+                alt="Project showcase 2"
+                fill
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="bg-[#DFF9F6] w-1/2 flex flex-col gap-5 justify-center p-6 border-l-2 border-black">
               <h1 className="text-6xl font-metro">PRISM</h1>
               <p>MAKE WATERLOO MORE INTERDISCIPLINARY</p>
               <Socials />

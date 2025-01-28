@@ -19,6 +19,9 @@ export default function Banner() {
         <span className="text-white mx-4">
           THE INTERSECTION OF ART AND TECHNOLOGY.
         </span>
+        <span className="text-white mx-4">
+          THE INTERSECTION OF ART AND TECHNOLOGY.
+        </span>
       </div>
     </div>
   );
