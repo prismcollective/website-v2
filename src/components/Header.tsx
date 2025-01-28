@@ -142,8 +142,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="text-black">
-            <h1 className="text-2xl font-metro">PRISM</h1>
-            <p className="text-sm font-metro">COLLECTIVE</p>
+            <h1 className="text-4xl font-metro">PRISM COLLECTIVE</h1>
           </div>
         </div>
 
