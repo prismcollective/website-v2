@@ -10,7 +10,7 @@ import Image from "next/image";
 import HolographicEffect from "@/components/Holograph";
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<null | boolean>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,10 +25,14 @@ export default function Home() {
     };
   }, []);
 
+  if (isMobile === null) {
+    return null;
+  }
+
   if (isMobile) {
     return (
       <div className="min-h-screen w-full overflow-y-auto flex flex-col">
-        <div className="w-full pb-[70px]">
+        <div className="w-full pb-[60px]">
           <div className="relative h-[500px] border-b-2 border-black">
             <HolographicEffect className="w-full h-full absolute inset-0" />
             <div className="absolute top-6 left-6 text-4xl w-64 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">

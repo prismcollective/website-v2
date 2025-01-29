@@ -23,7 +23,7 @@ const Header = () => {
     },
     {
       id: "contact",
-      label: "CONTACT US",
+      label: "CONTACT",
       link: "/contact",
     },
   ];
@@ -142,7 +142,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="text-black">
-            <h1 className="text-4xl font-metro">PRISM COLLECTIVE</h1>
+            <h1 className="text-3xl font-metro">PRISM COLLECTIVE</h1>
           </div>
         </div>
 
@@ -204,7 +204,7 @@ const Header = () => {
               <Link
                 href="https://discord.gg/EQW8Qu7jA9"
                 target="_blank"
-                // className="mt-4"
+                // className="mt-20"
               >
                 <Button variant="blue" className="shine-effect">
                   <span className="relative font-bold">Join Us →</span>
