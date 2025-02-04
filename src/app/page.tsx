@@ -131,10 +131,10 @@ export default function Home() {
           <div className="flex flex-1">
             <div className="relative w-1/2">
               <Image
-                src="/jellyfish-sculpture.png"
+                src="/jellyfish.gif"
                 alt="Project showcase 2"
                 fill
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full object-[center_10%]"
               />
             </div>
             <div className="bg-[#DFF9F6] w-1/2 flex flex-col gap-5 justify-center p-6 border-l-2 border-black">
