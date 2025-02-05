@@ -58,6 +58,15 @@ export default function Page() {
             researchers in Waterloo!
           </p>
         </div>
+
+        <div className="flex-1 bg-white p-6 md:p-8 border-2 border-black flex flex-col gap-6 md:gap-8 shadow-[3px_3px_0px_0px_#CCC] h-fit min-h-0">
+          <h1 className="font-bold text-lg font-mono">Subscribe to our Newsletter!</h1>
+          <p>
+           Hear about the latest Art tech projects, what PRISM is up to, workshops and get inspired by our curated Art-tech resources !
+          </p>
+          <iframe src="https://embeds.beehiiv.com/7da7aceb-9d28-4837-8a25-b953c661b0bf?slim=true" data-test-id="beehiiv-embed" height="52" className="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
+
+        </div>
       </div>
 
       <form
