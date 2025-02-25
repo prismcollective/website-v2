@@ -29,9 +29,24 @@ export default function Home() {
     return null;
   }
 
+  const TopBanner = () => (
+    <div className="w-full bg-black text-white py-2 px-4 flex justify-center items-center border-b-2 border-black">
+      <a 
+        href="https://prismcollective.notion.site/w25-projects?pvs=74" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center hover:underline"
+      >
+        <span className="mr-2">Check out our W25 projects list </span>
+        <span className="text-xl">→</span>
+      </a>
+    </div>
+  );
+
   if (isMobile) {
     return (
       <div className="min-h-screen w-full overflow-y-auto flex flex-col">
+        <TopBanner />
         <div className="w-full pb-[60px]">
           <div className="relative h-[500px] border-b-2 border-black">
             <HolographicEffect className="w-full h-full absolute inset-0" />
@@ -85,6 +100,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col flex-1">
+      <TopBanner />
       <div className="flex-1 flex">
         <div className="flex flex-1 border-r-2 border-black relative">
           <HolographicEffect className="w-full h-full absolute inset-0" />
