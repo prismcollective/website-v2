@@ -1,4 +1,5 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aab593d2-6be9-4332-ae6e-83c550453eb1/deploy-status)](https://app.netlify.com/sites/bejewelled-custard-758a08/deploys)
 
 ## Getting Started
 
