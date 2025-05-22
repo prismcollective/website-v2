@@ -44,12 +44,12 @@ export default function Page() {
 
   return (
     <div className="h-[calc(100vh-theme(spacing.16))] overflow-y-auto px-4 py-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12">
-      <div className="flex flex-col flex-1 gap-6 md:gap-12">
-        <div className="bg-white p-6 md:p-8 border-2 border-black flex flex-col gap-6 md:gap-8 shadow-[3px_3px_0px_0px_#CCC]">
+      <div className="flex flex-col flex-1 gap-6 md:gap-10">
+        <div className="bg-white p-6 border-2 border-black flex flex-col gap-4 md:gap-4 shadow-[3px_3px_0px_0px_#CCC]">
           <h1 className="font-bold text-lg font-mono">Get involved!</h1>
           <Socials email={false} variant="contact" />
         </div>
-        <div className="flex-1 bg-white p-6 md:p-8 border-2 border-black flex flex-col gap-6 md:gap-8 shadow-[3px_3px_0px_0px_#CCC] h-fit min-h-0">
+        <div className="flex-1 bg-white p-6 border-2 border-black flex flex-col gap-4 md:gap-4 shadow-[3px_3px_0px_0px_#CCC] h-fit min-h-0">
           <h1 className="font-bold text-lg font-mono">Support us!</h1>
           <p>
             We are always on the lookout for funding! Help us bring the next
@@ -59,19 +59,26 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="flex-1 bg-white p-6 md:p-8 border-2 border-black flex flex-col gap-6 md:gap-8 shadow-[3px_3px_0px_0px_#CCC] h-fit min-h-0">
-          <h1 className="font-bold text-lg font-mono">Subscribe to our Newsletter!</h1>
+        <div className="flex-1 bg-white p-6 border-2 border-black flex flex-col gap-4 md:gap-4 shadow-[3px_3px_0px_0px_#CCC] h-fit min-h-0">
+          <h1 className="font-bold text-lg font-mono">
+            Subscribe to our Newsletter!
+          </h1>
           <p>
-           Hear about the latest Art tech projects, what PRISM is up to, workshops and get inspired by our curated Art-tech resources !
+            Hear about the latest Art tech projects, what PRISM is up to,
+            workshops and get inspired by our curated Art-tech resources !
           </p>
-          <iframe src="https://embeds.beehiiv.com/7da7aceb-9d28-4837-8a25-b953c661b0bf?slim=true" data-test-id="beehiiv-embed" height="52" className="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
-
+          <iframe
+            src="https://embeds.beehiiv.com/7da7aceb-9d28-4837-8a25-b953c661b0bf?slim=true"
+            data-test-id="beehiiv-embed"
+            height="52"
+            className="margin: 0; border-radius: 0px !important; background-color: transparent;"
+          ></iframe>
         </div>
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="flex-1 bg-white p-8 border-2 border-black flex flex-col gap-8 shadow-[3px_3px_0px_0px_#CCC]"
+        className="flex-1 bg-white p-6 border-2 border-black flex flex-col gap-8 shadow-[3px_3px_0px_0px_#CCC]"
       >
         <h1 className="font-bold text-lg font-mono">
           Any inquiries? Ask here!

@@ -31,9 +31,9 @@ export default function Home() {
 
   const TopBanner = () => (
     <div className="w-full bg-black text-white py-2 px-4 flex justify-center items-center border-b-2 border-black">
-      <a 
-        href="https://prismcollective.notion.site/w25-projects?pvs=74" 
-        target="_blank" 
+      <a
+        href="https://prismcollective.notion.site/w25-projects?pvs=74"
+        target="_blank"
         rel="noopener noreferrer"
         className="flex items-center hover:underline"
       >
@@ -99,7 +99,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col flex-1">
+    <div className="flex flex-col flex-1 overflow-y-auto">
       <TopBanner />
       <div className="flex-1 flex">
         <div className="flex flex-1 border-r-2 border-black relative">
