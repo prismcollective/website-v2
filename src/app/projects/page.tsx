@@ -25,7 +25,7 @@ export default function Page() {
       image: "/jellyfish-sculpture.png",
       genres: ["mechanical", "electrical"],
       description:
-        "Kinetic creatures is an installation with custom-designed, motorized creatures and plants that look like they’re flowing in organic motion! ",
+        "Kinetic creatures is an installation with custom-designed, motorized creatures and plants that look like they're flowing in organic motion! ",
       team: ["Angela Wilks Jenkins"],
       notion:
         "https://prismcollective.notion.site/Currents-Kinetic-Creatures-fe5f5d984bbb4f17b8f2103d610c63d5?pvs=73",
@@ -45,7 +45,7 @@ export default function Page() {
     {
       title: "Lightbending - 2025",
       image: "/lightbending.webp",
-      genres: [ "electrical", "embedded"],
+      genres: ["electrical", "embedded"],
       description:
         "This 3D LED cube isn't just a light show—it's an interactive installation where each LED responds to live tracking data from a projector system. Whether you're moving your hand, projecting patterns, or triggering events, the cube translates motion into mesmerizing light animations across its three-dimensional space.",
       team: ["Daphne lai", "vedaant varshney", "Aaditya Chaudhary", "Shireen Rajora"],
@@ -71,23 +71,24 @@ export default function Page() {
       description:
         "Generating sound portraits using AI",
       team: ["aniket srinivasan ashok"],
-      notion:
-        "",
+      notion: "",
       github: "",
     },
-   
-    
   ];
 
   return (
-    <div className="min-h-screen w-full flex flex-col">
-    <main className="flex-grow overflow-auto bg-neutral-100">
-      <div className="flex flex-wrap justify-center items-start gap-6 px-4 md:px-10 py-8">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
+    <div className="min-h-screen w-full bg-neutral-100 overflow-auto">
+      <div className="w-full">
+        <main className="container mx-auto px-4 py-8 max-w-7xl">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 pb-16">
+            {projects.map((project) => (
+              <div key={project.title} className="flex justify-center">
+                <ProjectCard {...project} />
+              </div>
+            ))}
+          </div>
+        </main>
       </div>
-    </main>
-  </div>
+    </div>
   );
 }
