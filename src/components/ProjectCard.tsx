@@ -46,16 +46,14 @@ export default function ProjectCard({
           </div>
 
           {/* Genres */}
-          <div className="flex flex-row border-t-2 md:border-r-2 border-black">
+          <div className="flex flex-row md:border-r-2 border-black">
             {genres.map((genre, index) => (
               <div
                 key={genre}
                 className={`py-2 flex-auto text-xs flex justify-center items-center ${
                   genreMapping[genre]
                 } ${
-                  index !== genres.length - 1
-                    ? "border-r-2 border-black"
-                    : ""
+                  index !== genres.length - 1 ? "border-r-2 border-black" : ""
                 }`}
               >
                 {genre.toUpperCase()}
