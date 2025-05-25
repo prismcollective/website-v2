@@ -43,7 +43,7 @@ export default function Page() {
   };
 
   return (
-    <div className="h-[calc(100vh-theme(spacing.16))] overflow-y-auto px-4 py-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12">
+    <div className="min-h-[calc(100vh-var(--header-height))] overflow-y-auto px-4 py-6 md:p-12 flex flex-col lg:flex-row gap-6 md:gap-12">
       <div className="flex flex-col flex-1 gap-6 md:gap-10">
         <div className="bg-white p-6 border-2 border-black flex flex-col gap-4 md:gap-4 shadow-[3px_3px_0px_0px_#CCC]">
           <h1 className="font-bold text-lg font-mono">Get involved!</h1>
@@ -60,19 +60,20 @@ export default function Page() {
         </div>
 
         <div className="flex-1 bg-white p-6 border-2 border-black flex flex-col gap-4 md:gap-4 shadow-[3px_3px_0px_0px_#CCC] h-fit min-h-0">
-          <h1 className="font-bold text-lg font-mono">
+        <h1 className="font-bold text-lg font-mono">
             Subscribe to our Newsletter!
           </h1>
           <p>
             Hear about the latest Art tech projects, what PRISM is up to,
             workshops and get inspired by our curated Art-tech resources !
           </p>
-          <iframe
-            src="https://embeds.beehiiv.com/7da7aceb-9d28-4837-8a25-b953c661b0bf?slim=true"
-            data-test-id="beehiiv-embed"
-            height="52"
-            className="margin: 0; border-radius: 0px !important; background-color: transparent;"
-          ></iframe>
+          <div className="w-full max-w-full overflow-hidden">
+    <iframe
+      src="https://embeds.beehiiv.com/7da7aceb-9d28-4837-8a25-b953c661b0bf?slim=true"
+      className="w-full h-20 border-none"
+      title="Newsletter Subscription"
+    ></iframe>
+  </div>
         </div>
       </div>
 
