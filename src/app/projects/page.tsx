@@ -77,18 +77,17 @@ export default function Page() {
   ];
 
   return (
-    <div className="min-h-screen w-full bg-neutral-100 overflow-auto">
-      <div className="w-full">
-        <main className="container mx-auto px-4 py-8 max-w-7xl">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 pb-16">
-            {projects.map((project) => (
-              <div key={project.title} className="flex justify-center">
-                <ProjectCard {...project} />
-              </div>
-            ))}
+    <div className="min-h-screen w-full bg-neutral-100">
+    {/* Keep header from layout visible */}
+    <main className="container mx-auto px-4 py-8 max-w-7xl overflow-auto max-h-[calc(100vh-4rem)]">
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 pb-16">
+        {projects.map((project) => (
+          <div key={project.title} className="flex justify-center">
+            <ProjectCard {...project} />
           </div>
-        </main>
+        ))}
       </div>
-    </div>
+    </main>
+  </div>
   );
 }
