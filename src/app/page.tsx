@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1200);
     };
 
     handleResize();
@@ -45,9 +45,9 @@ export default function Home() {
 
   if (isMobile) {
     return (
-      <div className="min-h-screen w-full overflow-y-auto flex flex-col">
+      <div className="w-full h-full flex flex-col">
         <TopBanner />
-        <div className="w-full pb-[60px]">
+        <div className="w-full">
           <div className="relative h-[500px] border-b-2 border-black">
             <HolographicEffect className="w-full h-full absolute inset-0" />
             <div className="absolute top-6 left-6 text-4xl w-64 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">
@@ -99,17 +99,17 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col flex-1 overflow-y-auto">
+    <div className="h-full flex-1 flex flex-col">
       <TopBanner />
-      <div className="flex-1 flex">
-        <div className="flex flex-1 border-r-2 border-black relative">
+      <div className="flex-1 flex min-h-0">
+        <div className="min-w-0 flex-1 border-r-2 border-black relative">
           <HolographicEffect className="w-full h-full absolute inset-0" />
 
           <div className="absolute top-6 left-6 text-6xl w-80 font-bold text-white [text-shadow:-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_2px_2px_0_#000]">
             ART TECH AT THE UNIVERSITY OF WATERLOO
           </div>
         </div>
-        <div className="flex flex-1 flex-col">
+        <div className="w-[768px] flex-shrink-0 flex flex-col min-h-0">
           <div className="flex flex-1 border-b-2 border-black">
             <div className="relative w-1/2">
               <Image
@@ -124,7 +124,7 @@ export default function Home() {
               QUO AND ENCOURAGE NEW FORMS OF EXPRESSION
             </div>
           </div>
-          <div className="flex flex-1 border-b-2 border-black">
+          <div className="flex flex-1 border-b-2 border-black min-h-0">
             <div className="w-1/2 relative flex flex-col gap-5 items-center justify-center p-6 bg-[#A3D5F8]">
               <div>
                 KINETIC SCULPTURES / GENERATIVE ART / PROJECTION MAPPING /
@@ -148,13 +148,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-1">
-            <div className="relative w-1/2">
+          <div className="flex flex-1 min-h-0">
+            <div className="relative w-1/2 p-2">
               <Image
                 src="/jellyfish.gif"
                 alt="Project showcase 2"
                 fill
-                className="object-cover w-full h-full object-[center_10%]"
+                className="object-cover w-full h-full object-[center_15%]"
               />
             </div>
             <div className="bg-[#DFF9F6] w-1/2 flex flex-col gap-5 justify-center p-6 border-l-2 border-black">

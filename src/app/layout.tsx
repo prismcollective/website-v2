@@ -1,21 +1,18 @@
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Azeret_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { customFont } from "./fonts";
-import NavigationEvents from '@/components/NavigationEvents'
-import { Suspense } from 'react'
-
+import NavigationEvents from "@/components/NavigationEvents";
+import { Suspense } from "react";
 
 export const metadata = {
   icons: {
-    icon: '/prism-logo.png', 
-    apple: '/prism-logo.png',
-    shortcut: '/prism-logo.png',
-  }
+    icon: "/prism-logo.png",
+    apple: "/prism-logo.png",
+    shortcut: "/prism-logo.png",
+  },
 };
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,7 +53,6 @@ function MobileFooter() {
 }
 */
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,9 +67,8 @@ export default function RootLayout({
           <NavigationEvents />
         </Suspense>
         <Header />
-        
-        {children}
-        
+        <div className="flex-1 overflow-y-auto">{children}</div>
+
         {/*<ClientOnly>
           <MobileFooter />
         </ClientOnly>*/}

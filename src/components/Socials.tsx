@@ -48,7 +48,7 @@ export default function Socials({
   return (
     <div
       className={`flex ${
-        variant === "contact" ? "flex-col md:flex-row" : ""
+        variant === "contact" ? "flex-col xl:flex-row" : ""
       } gap-6 justify-between`}
     >
       {links.map(({ href, icon: Icon, label }) => (
