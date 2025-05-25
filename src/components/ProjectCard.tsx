@@ -37,16 +37,16 @@ export default function ProjectCard({
       </div>
 
       {/* Main Body */}
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row min-h-0 flex-1">
         {/* Left Section */}
-        <div className="flex flex-col flex-1 border-black">
+        <div className="flex flex-col flex-1 border-black h-full">
           {/* Title */}
           <div className="p-4 border-b-2 md:border-r-2 text-xl md:text-2xl border-black">
             {title}
           </div>
 
           {/* Genres */}
-          <div className="flex flex-row border-t-2 border-black">
+          <div className="flex flex-row border-t-2 md:border-r-2 border-black">
             {genres.map((genre, index) => (
               <div
                 key={genre}
@@ -55,7 +55,7 @@ export default function ProjectCard({
                 } ${
                   index !== genres.length - 1
                     ? "border-r-2 border-black"
-                    : "md:border-r-2 md:border-black"
+                    : ""
                 }`}
               >
                 {genre.toUpperCase()}
@@ -64,7 +64,7 @@ export default function ProjectCard({
           </div>
 
           {/* Description */}
-          <div className="p-4 border-t-2 md:border-r-2 border-black">
+          <div className="p-4 border-t-2 md:border-r-2 border-black flex-1">
             {description}
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function ProjectCard({
         {/* Right Section */}
         <div className="flex md:basis-1/3 flex-col p-4 md:p-6 border-t-2 md:border-t-0 border-black gap-5">
           {/* Team */}
-          <div className="text-xs md:border-2 md:border-black md:p-3 flex-auto">
+          <div className="text-xs md:border-2 md:border-black md:p-3 flex-1">
             <div className="font-mono">
               <span className="font-bold">Team Leads: </span>
               <span className="md:hidden">{team.join(", ")}</span>
