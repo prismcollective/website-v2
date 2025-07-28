@@ -21,12 +21,12 @@ export default function Socials({
       label: "Discord",
     },
     {
-      href: "https://instagram.com/uwprism",
+      href: "https://www.instagram.com/prismcollectiv_/",
       icon: FaInstagram,
       label: "Instagram",
     },
     {
-      href: "https://x.com/uwprism",
+      href: "https://x.com/prismcollectiv_",
       icon: RiTwitterXFill,
       label: "Twitter",
     },
