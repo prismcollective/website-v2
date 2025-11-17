@@ -51,12 +51,11 @@ export default function Page() {
         </div>
         <div className="flex-1 bg-white p-6 border-2 border-black flex flex-col gap-4 md:gap-4 shadow-[3px_3px_0px_0px_#CCC] h-fit min-h-0">
           <h1 className="font-bold text-lg font-mono">Support us!</h1>
-          <p>
-            We are always on the lookout for funding! Help us bring the next
-            art-tech project to life. Please reach out to{" "}
-            <b>uwprism@gmail.com </b>to support the most creative engineers and
-            researchers in Waterloo!
-          </p>
+          <p> We’re always dreaming bigger — and we’re always on the lookout for partners who believe in the future of art and technology. <br /><br /> If you’d like to help bring the next PRISM installation to life, we’d love to connect. Support the most creative engineers and researchers in Waterloo by reaching out to <b>uwprism@gmail.com</b>. <br /><br /> You can explore our full <a href="https://drive.google.com/file/d/1Vh0sXLmFP1olHPpa-5sLCyRZ0M4fkbwv/view?usp=sharing
+" target="_blank"><u><b>Sponsor Package here</b></u></a>. </p>
+<br></br>
+
+
         </div>
 
         <div className="flex-1 bg-white p-6 border-2 border-black flex flex-col gap-4 md:gap-4 shadow-[3px_3px_0px_0px_#CCC] h-fit min-h-0">
