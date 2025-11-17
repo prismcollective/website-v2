@@ -42,3 +42,24 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+/* Prevent flashing during image and component loading */
+img, video, canvas {
+  opacity: 0;
+  animation: fadeInImage 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Smooth WebGL canvas initialization */
+canvas {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}

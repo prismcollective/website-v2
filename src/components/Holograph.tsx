@@ -8,9 +8,15 @@ interface HolographicEffectProps {
 
 const HolographicEffect: React.FC<HolographicEffectProps> = ({ className }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const animationIdRef = useRef<number | null>(null);
+  const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
+    
+    // Add a small delay to prevent flashing during initial render
+    const initTimeout = setTimeout(() => {
+      if (!containerRef.current) return;
 
     // Vertex shader
     const vertexShader = `
@@ -99,9 +105,12 @@ const HolographicEffect: React.FC<HolographicEffectProps> = ({ className }) => {
       antialias: true,
       alpha: true,
       preserveDrawingBuffer: false,
+      powerPreference: "high-performance",
+      failIfMajorPerformanceCaveat: false,
     });
     
-    renderer.setPixelRatio(window.devicePixelRatio);
+    rendererRef.current = renderer;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limit pixel ratio for performance
     renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
     renderer.setClearColor(0x000000, 0);
     containerRef.current.appendChild(renderer.domElement);
@@ -142,23 +151,31 @@ const HolographicEffect: React.FC<HolographicEffectProps> = ({ className }) => {
     window.addEventListener('resize', handleResize);
 
     const animate = () => {
-      const animationId = requestAnimationFrame(animate);
+      if (!rendererRef.current) return;
+      animationIdRef.current = requestAnimationFrame(animate);
       material.uniforms.time.value += 0.01;
       renderer.render(scene, camera);
-      return animationId;
     };
 
-    const animationId = animate();
+    animate();
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationId);
+      if (animationIdRef.current) {
+        cancelAnimationFrame(animationIdRef.current);
+      }
       if (containerRef.current?.contains(renderer.domElement)) {
         containerRef.current.removeChild(renderer.domElement);
       }
       geometry.dispose();
       material.dispose();
       renderer.dispose();
+      rendererRef.current = null;
+    };
+    }, 100); // 100ms delay to prevent initial flashing
+
+    return () => {
+      clearTimeout(initTimeout);
     };
   }, []);
 

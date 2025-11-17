@@ -155,6 +155,14 @@ export default function Home() {
                 alt="Project showcase 2"
                 fill
                 className="object-cover w-full h-full object-[center_15%]"
+                priority={false}
+                unoptimized={true}
+                loading="lazy"
+                style={{
+                  imageRendering: 'auto',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
             </div>
             <div className="bg-[#DFF9F6] w-1/2 flex flex-col gap-5 justify-center p-6 border-l-2 border-black">

@@ -19,16 +19,16 @@ export default {
       keyframes: {
         "scroll-left": {
           from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
+          to: { transform: "translateX(-100%)" },
         },
         "scroll-left-fast": {
           from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-75%)" },
+          to: { transform: "translateX(-100%)" },
         },
       },
       animation: {
-        "scroll-left": "scroll-left 26s linear infinite",
-        "scroll-left-fast": "scroll-left-fast 16s linear infinite",
+        "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-left-fast": "scroll-left-fast 20s linear infinite",
       },
     },
   },
